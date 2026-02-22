@@ -1,0 +1,53 @@
+# Kompilowane pliki Pythona
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Środowiska wirtualne
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Logi i pliki tymczasowe
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.temp
+
+# Konfiguracje IDE/edytorów
+.vscode/
+.idea/
+*.sublime-*
+
+# Pliki testowe i coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Dystrybucja / build
+build/
+dist/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints
+
+# Inne
+.DS_Store
+Thumbs.db
