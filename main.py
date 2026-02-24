@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 # Ładuj .env PRZED importami LangChain/LangSmith (override=True nadpisuje zmienne systemowe)
 load_dotenv(override=True)
 
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain_ollama import ChatOllama
 from langsmith import traceable
@@ -35,8 +34,7 @@ def main():
 
 
     summary_prompt = PromptTemplate(template=summary_template, input_variables=["information"])
-    llm = ChatOpenAI(model="gpt-5-mini", temperature=0)
-    # llm = ChatOllama(model="gpt-oss", temperature=0)
+    llm = ChatOllama(model="llama-3.3-70b-versatile", temperature=0)
     chain = summary_prompt | llm
     reponse = chain.invoke(input={"information": information})
     print(reponse.content)
